@@ -1,0 +1,35 @@
+Name: simple-chat-client
+Summary: Simple Chat Client
+Version: 0.1
+Release: 1
+Group: Qt/Qt
+URL: https://gitlab.com/sailfishos-examples
+License: LICENSE
+Sources:
+- '%{name}-%{version}.tar.bz2'
+Description: |
+  A project to demonstrate Qt WebSockets.
+Configure: none
+Builder: qtc5
+
+PkgConfigBR:
+  - sailfishapp >= 1.0.2
+  - Qt5Core
+  - Qt5Qml
+  - Qt5Quick
+
+# PkgBR:
+#   - package-needed-to-build
+
+Requires:
+  - sailfishsilica-qt5 >= 0.10.9
+  - qt5-qtwebsockets
+  # ToDo: add requires to use WebSockets in QML --
+
+Files:
+  - '%{_datadir}/%{name}'
+  - '%{_datadir}/applications/%{name}.desktop'
+  - '%{_datadir}/icons/hicolor/*/apps/%{name}.png'
+
+# For more information about yaml and what's supported in Sailfish OS
+# build system, please see https://wiki.merproject.org/wiki/Spectacle

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=simple-chat-client
+Exec=sailfish-qml simple-chat-client
+Name=Simple Chat Client
+Name[ru]=Простой клиент чата
