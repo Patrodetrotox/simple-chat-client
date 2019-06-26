@@ -23,8 +23,8 @@ PkgConfigBR:
 
 Requires:
   - sailfishsilica-qt5 >= 0.10.9
-  - qt5-qtwebsockets
-  # ToDo: add requires to use WebSockets in QML --
+  - qt5-qtdeclarative-import-websockets
+  # ToDo: add requires to use WebSockets in QML
 
 Files:
   - '%{_datadir}/%{name}'

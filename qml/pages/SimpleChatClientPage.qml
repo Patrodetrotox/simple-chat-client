@@ -2,7 +2,7 @@ import QtQuick 2.6
 import Sailfish.Silica 1.0
 import "../assets"
 import QtWebSockets 1.0
-// ToDo: import QtWebSockets
+// ToDo: import QtWebSockets --
 
 Page {
     property url serverUrl: "wss://echo.websocket.org"
@@ -10,12 +10,12 @@ Page {
     WebSocket {
         id: webSocket
         url: serverUrl
-        // ToDo: set url --
+        // ToDo: set url
         active: true
         onTextMessageReceived: {
             chatView.postIncomingText(message, "EchoServer");
             chatView.scrollToBottom();
-            // ToDo: implement handler --
+            // ToDo: implement handler
         }
         onStatusChanged: {
             if (webSocket.status === WebSocket.Error) {
@@ -56,8 +56,8 @@ Page {
                     EnterKey.enabled: text.length > 0
                     EnterKey.iconSource: "image://theme/icon-m-sms"
                     EnterKey.onClicked: {
-                        // ToDo: send to WebSocket --
-                        webSocket.sendTextMessage(message);
+                        // ToDo: send to WebSocket
+                        webSocket.sendTextMessage(text);
                         chatView.postOutgoingText(text, qsTr("Me"));
                         chatView.scrollToBottom();
                         text = "";
